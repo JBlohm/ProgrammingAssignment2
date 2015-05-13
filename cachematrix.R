@@ -14,7 +14,23 @@
 ## - retrieve a matrix object from cache
 makeCacheMatrix <- function(x = matrix()) {
         ## 'x' is a matrix object to be stored
-    
+  
+        ## Initialize the cache to NULL
+        mcache <- NULL
+        
+        ## SubFunctions to set/get the original matrix
+        setMatrix <- function(y) {
+                
+        }
+        getMatrix <- function() x
+        
+        ##Sub functions to set/get the inverse to/from cache
+        setInverse <- function(inverse) mcache <<- inverse
+        getInverse <- function() mcache
+        
+        ## Return the list of functions defined above
+        list(setMatrix = setMatrix, getMatrix = getMatrix,
+             setInverse = setInverse, getInverse = getInverse)
 }
 
 
