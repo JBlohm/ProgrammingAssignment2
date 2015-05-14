@@ -9,6 +9,35 @@
 ##             If the inverse of the matix has already been calculated,
 ##             and the matrix is unchanged, 
 ##             the cached result will be returned.
+##
+## Usage examples:
+##
+##> x <- makeCacheMatrix(matrix(c(0,1,2,0),2,2))
+##> x$getMatrix()
+##[,1] [,2]
+##[1,]    0    2
+##[2,]    1    0
+##> cacheSolve(x)
+##[,1] [,2]
+##[1,]  0.0    1
+##[2,]  0.5    0
+##> cacheSolve(x)
+##returning cached data
+##[,1] [,2]
+##[1,]  0.0    1
+##[2,]  0.5    0
+##> x$setMatrix(matrix(c(0,1,5,0),2,2))
+##> cacheSolve(x)
+##[,1] [,2]
+##[1,]  0.0    1
+##[2,]  0.2    0
+##> cacheSolve(x)
+##returning cached data
+##[,1] [,2]
+##[1,]  0.0    1
+##[2,]  0.2    0
+##> 
+
 
 ## Function description:
 ## makeCacheMatrix: Returns a vector containing functions to
